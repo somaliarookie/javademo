@@ -1,0 +1,13 @@
+spring:
+  redis:
+    database: 0
+    host: 52.42.244.218
+    port: 6379
+
+
+
+
+
+test:
+  info: infovalue
+  info1: infovalue1
