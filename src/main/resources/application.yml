@@ -9,6 +9,10 @@ spring:
 
 
 
+#auto config start
+
 test:
   info: infovalue
   info1: infovalue1
+
+#auto config end
