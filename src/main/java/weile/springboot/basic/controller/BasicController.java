@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 import weile.Config;
-import weile.springboot.basic.RedisService;
+import weile.springboot.redis.RedisService;
 import weile.springboot.basic.controller.dto.PostParam;
 
 @RestController
