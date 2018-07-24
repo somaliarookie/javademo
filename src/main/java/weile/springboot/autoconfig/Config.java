@@ -1,4 +1,4 @@
-package weile;
+package weile.springboot.autoconfig;
 
 
 import org.springframework.beans.factory.annotation.Value;

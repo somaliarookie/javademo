@@ -1,4 +1,4 @@
-package weile.springboot.basic.controller.dto;
+package weile.springboot.basic;
 
 public class PostParam {
 
