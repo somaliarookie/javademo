@@ -1,11 +1,14 @@
 spring:
-#redis config start
+#redis start
   redis:
     database: 0
     host: 52.42.244.218
     port: 6379
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.187.26:9300
 
-#redis config end
+#redis end
 
 
 
@@ -16,3 +19,5 @@ test:
   info1: infovalue1
 
 #auto config end
+
+
