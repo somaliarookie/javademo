@@ -26,7 +26,7 @@ public class OrderInfo implements Serializable {
         return paystatus;
     }
 
-    public void setPaystatus(Integer paystatus) {
+    public void setPaystatus(int paystatus) {
         this.paystatus = paystatus;
     }
 
