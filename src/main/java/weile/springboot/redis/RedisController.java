@@ -16,7 +16,7 @@ public class RedisController {
     @Autowired
     private RedisService redisService;
 
-    @RequestMapping(value = "/redis/insert")
+    @RequestMapping(value = "/redis/set")
     public boolean insert() {
         return redisService.set("name", "cc");
     }

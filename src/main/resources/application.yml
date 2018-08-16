@@ -2,7 +2,7 @@ spring:
 #redis start
   redis:
     database: 0
-    host: 52.42.244.218
+    host: 192.168.139.204
     port: 6379
   data:
     elasticsearch:
