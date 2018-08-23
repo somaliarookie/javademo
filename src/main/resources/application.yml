@@ -1,5 +1,7 @@
 spring:
 #redis start
+  application:
+    name: demo
   redis:
     database: 0
     host: 192.168.139.204
@@ -8,6 +10,23 @@ spring:
     elasticsearch:
       cluster-nodes: 127.0.0.1:9300
       cluster-name: elasticsearch_weile
+  cloud:
+    consul:
+      host: 192.168.139.204
+      port: 8500
+      enabled: true
+      discovery:
+        tags: demo
+        register: true
+        healthCheckInterval: 5s
+        instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        serviceName: demo
+        hostname: demohost
+        port: ${server.port}
+
+
+
+
 
 #redis end
 
@@ -18,7 +37,10 @@ spring:
 test:
   info: infovalue
   info1: infovalue1
+server:
+  port: 8080
 
 #auto config end
+
 
 
