@@ -9,21 +9,29 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class RedisController {
 
-
-
-
-
     @Autowired
-    private RedisService redisService;
+    private  RedisOptimisticLockTest  test;
 
-    @RequestMapping(value = "/redis/set")
-    public boolean insert() {
-        return redisService.set("name", "cc");
+    @RequestMapping(value = "/redis/optest")
+    public boolean testOptimistic() {
+
+        test.execute(10);
+
+        return true;
     }
 
-    @RequestMapping(value = "/redis/get")
-    public String get() {
-        return redisService.get("name").toString();
-    }
+
+//    @Autowired
+//    private RedisService redisService;
+//
+//    @RequestMapping(value = "/redis/set")
+//    public boolean insert() {
+//        return redisService.set("name", "cc");
+//    }
+//
+//    @RequestMapping(value = "/redis/get")
+//    public String get() {
+//        return redisService.get("name").toString();
+//    }
 
 }

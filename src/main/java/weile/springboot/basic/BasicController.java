@@ -3,15 +3,20 @@ package weile.springboot.basic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
-import weile.springboot.autoconfig.Config;
-import weile.springboot.redis.RedisService;
+import weile.springboot.autoconfig.RedisPoolConfig;
 
 @RestController
 @EnableAutoConfiguration
 public class BasicController {
 
 
+    @Autowired
+    RedisPoolConfig redisPoolConfig;
 
+    @RequestMapping("/")
+    public String home() {
+        return "Hello world"+redisPoolConfig.getAddr();
+    }
 
     @RequestMapping("/get")
     String hello() {
