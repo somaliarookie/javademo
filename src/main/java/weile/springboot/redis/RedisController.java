@@ -15,7 +15,7 @@ public class RedisController {
     @RequestMapping(value = "/redis/optest")
     public boolean testOptimistic() {
 
-        test.execute(10);
+        test.execute(100000);
 
         return true;
     }
