@@ -1,12 +1,29 @@
 spring:
   application:
     name: consul-demo
+    port: 8081
 
-config:
-  redis:
-    addr: 127.0.0.1:6379
-    retry: 3
-    expire: 2592000
+#goods-query redis
+redis:
+  test:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 2000
+    maxActive: 300
+    maxIdle: 100
+    maxWait: 1000
+    testOnBorrow: true
+    testWhileIdle: true
+
+
+
+#goods-command
+#config:
+#  redis:
+#    addr: 127.0.0.1:6379
+#    retry: 3
+#    expire: 2592000
 
 
 #  data:
@@ -17,8 +34,7 @@ config:
 
 #  cloud:
 #    consul:
-#      host: 192.168.139.204
+    #      host: 192.168.139.204
 #      port: 8500
 #      discovery:
-#        healthCheckPath: /
-#        healthCheckInterval: 5s
+#        healthCheckPath: /#        healthCheckInterval: 5s
