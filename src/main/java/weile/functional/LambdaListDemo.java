@@ -29,20 +29,42 @@ public class LambdaListDemo {
                 add(new Person("Jayden", "Corrina", "Java programmer", "female", 35, 1700));
                 add(new Person("Palmer", "Dene", "Java programmer", "male", 33, 2000));
                 add(new Person("Addison", "Pam", "Java programmer", "female", 34, 1300));
-            }};
-         javaProgrammers.forEach(( p) -> System.out.printf("%s; ", p.getLastName()));
+            }
+        };
+
+        System.out.println("source :");
+        javaProgrammers.forEach((p) -> System.out.printf("name:%s age:%s; ", p.getFirstName(),p.getAge()));
+
+        //modify data
+        javaProgrammers.forEach((p) -> p.setAge(p.getAge()+1));
+
+
+        System.out.println("after :");
+        javaProgrammers.forEach((p) -> System.out.printf("name:%s age:%s; ", p.getFirstName(),p.getAge()));
 
 
 
-//        languages.stream().
+        System.out.println("filter befor :");
+        javaProgrammers.stream()
+                .filter((p) -> (p.getSalary() > 1800))
+                .filter((p) -> (p.getAge() > 30))
+                .forEach((p) -> System.out.printf("name:%s age:%s; ", p.getFirstName(),p.getAge()));
+
+        System.out.println("filter after :");
 
 
-        }
+
+
+
+
+
+
 
 
     }
 
 
+}
 
 
 class Person {
