@@ -7,7 +7,7 @@ import org.omg.CORBA.ServiceInformationHolder;
  * @Time 2019-04-02 20:18
  * @Description lambda 实例
  **/
-public class LambdaDemo {
+public class LambdaBaseDemo {
 
 
     public static void main(String[] args) {
