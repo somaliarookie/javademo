@@ -47,7 +47,6 @@ hystrix:
     default:
       circuitBreaker:
         enabled: true
-        forceOpen: true
       execution:
         timeout:
           enabled: true

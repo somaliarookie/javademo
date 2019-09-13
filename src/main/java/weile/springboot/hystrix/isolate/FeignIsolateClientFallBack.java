@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FeignIsolateClientFallBack implements FeignIsolateClient {
 	@Override
-	public String callwithCustomRT(boolean isMockOk, Long timeout) {
-		return "callwithCustomRT call back";
+	public String callwithCustomRT(boolean isMockOk, Long timeout, Long exception) {
+		return "feign client fallback ";
 	}
 }

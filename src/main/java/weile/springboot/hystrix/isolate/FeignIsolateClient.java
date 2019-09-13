@@ -17,6 +17,6 @@ public interface FeignIsolateClient {
 
 	@RequestMapping(value = "/mock", method = RequestMethod.GET)
 	@ResponseBody
-	String callwithCustomRT(@RequestParam(name = "isok",required = false,defaultValue = "1")  boolean isMockOk,@RequestParam(name = "timeout",required = false,defaultValue = "500") Long timeout );
+	String callwithCustomRT(@RequestParam(name = "isok",required = false,defaultValue = "1")  boolean isMockOk,@RequestParam(name = "timeout",required = false,defaultValue = "500") Long timeout ,@RequestParam(name = "e",required = false,defaultValue = "0") Long exception);
 
 }

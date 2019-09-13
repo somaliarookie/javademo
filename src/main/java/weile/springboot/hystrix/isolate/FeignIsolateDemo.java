@@ -20,10 +20,10 @@ public class FeignIsolateDemo {
 	private  FeignIsolateClient feignIsolateClient;
 
 	@RequestMapping("/isolate")
-	String mock(@RequestParam(name = "isok",required = false,defaultValue = "1")  boolean isMockOk,@RequestParam(name = "timeout",required = false,defaultValue = "500") Long timeout ) {
+	String mock(@RequestParam(name = "isok",required = false,defaultValue = "1")  boolean isMockOk,@RequestParam(name = "timeout",required = false,defaultValue = "500") Long timeout ,@RequestParam(name = "e",required = false,defaultValue = "0") Long exception) {
 
 
-		String callwithCustomRT = feignIsolateClient.callwithCustomRT(isMockOk, timeout);
+		String callwithCustomRT = feignIsolateClient.callwithCustomRT(isMockOk, timeout,exception);
 
 
 		return callwithCustomRT;
