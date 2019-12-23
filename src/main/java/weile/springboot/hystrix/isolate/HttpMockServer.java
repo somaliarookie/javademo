@@ -20,7 +20,7 @@ public class HttpMockServer {
 
 
         long start = System.currentTimeMillis();
-        if (!isMockOk) {
+        if (!isMockOk && timeout>0) {
 
             try {
                 Thread.sleep(timeout);

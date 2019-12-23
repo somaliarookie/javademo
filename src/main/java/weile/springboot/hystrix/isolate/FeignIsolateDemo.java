@@ -1,6 +1,5 @@
 package weile.springboot.hystrix.isolate;
 
-import com.oracle.tools.packager.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +19,7 @@ public class FeignIsolateDemo {
 	private  FeignIsolateClient feignIsolateClient;
 
 	@RequestMapping("/isolate")
-	String mock(@RequestParam(name = "isok",required = false,defaultValue = "1")  boolean isMockOk,@RequestParam(name = "timeout",required = false,defaultValue = "500") Long timeout ,@RequestParam(name = "e",required = false,defaultValue = "0") Long exception) {
+	String mock(@RequestParam(name = "isok",required = false,defaultValue = "1")  boolean isMockOk,@RequestParam(name = "timeout",required = false,defaultValue = "0") Long timeout ,@RequestParam(name = "e",required = false,defaultValue = "0") Long exception) {
 
 
 		String callwithCustomRT = feignIsolateClient.callwithCustomRT(isMockOk, timeout,exception);
